@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Kamali's Portfolio{% endblock %}
+{% block body_class %}projects-page{% endblock %}
+
+{% block content %}
+  <h1 class="section-title">Projects</h1>
+  <p class="project-intro">A few things I'm excited to work on</p>
+
+  <ul class="project-list">
+    <li>
+      <h2>⚽ European Soccer Stats Web App</h2>
+      <p>Designed and coded a basic website to showcase live or hardcoded data from top European leagues like the Premier League and La Liga. Users can explore stats for players, teams, and managers with intuitive search functionality.</p>
+      <p><strong>Technologies:</strong> Flask, APIs (or static JSON), SQLite, JavaScript</p>
+      <p><em>Status: In planning</em></p>
+    </li>
+
+    <li>
+      <h2>💰 Personal Finance & Investment Tracker</h2>
+      <p>A personal finance tool to track spending, savings, and investments — featuring AI-powered simulations to help forecast future scenarios based on habits and goals.</p>
+      <p><strong>Technologies:</strong> Python, Flask or React, SQLite/PostgreSQL, Chart.js, AI APIs</p>
+      <p><em>Status: Concept phase</em></p>
+    </li>
+
+    <li>
+      <h2>🌿 Smart Plant Watering System</h2>
+      <p>Originally built in high school, this IoT project detects soil moisture and automatically waters plants. I plan to expand it with app integration for remote control and monitoring.</p>
+      <p><strong>Technologies:</strong> Arduino or Raspberry Pi, Moisture Sensors, Python/C++, Mobile App (Flutter/React Native)</p>
+      <p><em>Status: Redevelopment</em></p>
+    </li>
+  </ul>
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Kamali's Portfolio{% endblock %}
+{% block body_class %}front-page{% endblock %}
+
+{% block content %}
+  <h1 class="name reveal reveal-1" id="name-text"></h1>
+  <p class="description reveal reveal-2" id="description" style="margin-top: -20px;"></p>
+
+  <div id="post-typewriter-content" class="reveal reveal-3">
+    <section class="home-projects-preview reveal reveal-4">
+      <h2 class="home-projects-title">Projects</h2>
+      <ul class="home-projects-list">
+        <li>⚽ European Soccer Stats Web App</li>
+        <li>💰 Personal Finance & Investment Tracker</li>
+        <li>🌿 Smart Plant Watering System</li>
+      </ul>
+      <p><a href="{{ url_for('projects') }}" class="view-all-link">→ Projects in detail</a></p>
+    </section>
+
+    <section class =
+  </div>
+{% endblock %}

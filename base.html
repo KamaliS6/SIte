@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>{% block title %}Kamali's Portfolio{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+<div class="container">
+
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <div class="nav-icons">
+      <p><a href="{{ url_for('index') }}">Home</a></p>
+      <p><a href="{{ url_for('projects') }}">Projects</a></p>
+      <p><a href="{{ url_for('resume') }}">Resume</a></p>
+      <p><a href="{{ url_for('contact') }}">Contact</a></p>
+    </div>
+  </nav>
+
+
+  <!-- Main Content -->
+  <main id="page-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Kamali Smith. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+
+</html>

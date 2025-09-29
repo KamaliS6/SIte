@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Contact - Kamali's Portfolio{% endblock %}
+{% block body_class %}contact-page{% endblock %}
+
+{% block content %}
+<section class="form-section">
+  <div class="welcome-banner">
+    <p>Get in Touch!</p>
+  </div>
+
+  <form id="contact-form" method="POST" action="{{ url_for('submit_message') }}" >
+    {{ form.csrf_token }}
+
+    <div class="input-row">
+      <input type="text" name="name"    placeholder="Your Name" required />
+      <input type="email" name="email"  placeholder="Your Email" required />
+      <input type="text" name="subject"  placeholder="Subject (Optional)" required />
+    </div>
+    <div>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+    </div>
+    <div>
+      <button type="submit">Send Message</button>
+    </div>
+  </form>
+
+  <div id="ajax-flash-message"></div>
+  {# You can remove this div if you're certain you'll never display messages here #}
+  {# <div id="messages-container"></div> #}
+</section>
+{% endblock %}
+
